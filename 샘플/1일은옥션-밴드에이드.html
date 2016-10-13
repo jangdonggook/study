@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<title>¿Á¼Ç - ¸ğ¹ÙÀÏ ¼îÇÎÀº ¿Á¼Ç</title>
+	<title>ì˜¥ì…˜ - ëª¨ë°”ì¼ ì‡¼í•‘ì€ ì˜¥ì…˜</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/086A428A1C/jquery-1.11.3.min.js"></script>
@@ -11,21 +11,17 @@
 		*{margin:0;padding:0; border:0;}
 		li{list-style:none;}
 		img{border:0;}
-
 		#p_wrapper{width:100%;text-align:center;}
 		#p_wrapper img{vertical-align: top;}
 		#p_header{position: relative;background: url(http://eventimg.auction.co.kr/md/auction/08D0B01023/w_bg_top.jpg) no-repeat 50% 0 #eee5dc;height:400px;}
 		#p_header #p_share{position:absolute;top:20px;right:50%;margin-right:-470px;width:56px;}
 		#p_wrapper .blind{display: none}
-
 		#p_navi{width:100%;height:68px;position:relative;z-index:300;}
 		#p_navi_cnt{height:68px;z-index:10;}
 		#p_navi_cnt ul{width:644px;padding:0 168px;/*background:#000000*/;background-color:#c20012;margin:0 auto;overflow:hidden;}
 		#p_navi_cnt ul li{float:left;text-align:center;}
-
 		#p_story{background: #26a2b1;padding-top:60px;}
 		#p_story .visual{width: 560px;height: 357px;position: relative;margin:0 auto;background:#6b6b6b}		
-
 		#p_movie{background: #f5f5f5;padding-bottom:60px;}
 		#p_movie .mv{width: 560px;height: 357px;margin:0 auto;background: #252525}
 		
@@ -34,25 +30,22 @@
 		.mm2{z-index: 104}
 		.mm3{z-index: 103}
 		.mm4{z-index: 102}
-
 		.p_section h3{background:#c20012}
 		.p_section .inner{padding:40px 0;}
 		#p_sec2 {padding-bottom:40px;}
 		#p_sec2 .info dd{display: none}
-
 		#p_sec3{background:#ffca2d;padding-bottom:60px;}
 		#p_sec3 .p_sec3_area{width: 980px;margin:0 auto;position: relative;}
 		#p_sec3 .p_sec3_area .p_select_area{position: absolute;top:0;left:0;width: 100%;height: 100%;}
 		#p_sec3 .p_sec3_area .p_select_area li{position: absolute;overflow: hidden;background-image: url(http://eventimg.auction.co.kr/md/auction/08D0B01023/w_area_name.png);background-repeat: no-repeat;cursor: pointer;}
 		#p_sec3 .p_sec3_area .p_select_area li .p_over{position: absolute;top:0;left: 0;width: 100%;height: 100%;background-image: url(http://eventimg.auction.co.kr/md/auction/08D0B01023/w_area_name.png);background-repeat: no-repeat;display:none}
-		#p_sec3 .p_sec3_area .p_select_area li.btn_sel1{top:218px;left:499px;width: 90px;height: 40px;background-position:0 0 } /* ¾ó±¼*/
-		#p_sec3 .p_sec3_area .p_select_area li.btn_sel2{top:339px;left:583px;width: 70px;height: 40px;background-position:-90px 0 } /* ¼Õ*/
-		#p_sec3 .p_sec3_area .p_select_area li.btn_sel3{top:281px;left:382px;width: 106px;height: 40px;background-position:-160px 0 } /* ¸ğµçºÎÀ§*/
-		#p_sec3 .p_sec3_area .p_select_area li.btn_sel4{top:354px;left:303px;width: 90px;height: 40px;background-position:-266px 0 } /* ¼Õ³¡*/
-		#p_sec3 .p_sec3_area .p_select_area li.btn_sel5{top:453px;left:374px;width: 70px;height: 40px;background-position:-356px 0 } /* ¹ß*/
-		#p_sec3 .p_sec3_area .p_select_area li.btn_sel6{top:412px;left:516px;width: 90px;height: 40px;background-position:-426px 0 } /* ¹«¸­*/
-		#p_sec3 .p_sec3_area .p_select_area li.btn_sel7{top:285px;left:555px;width: 90px;height: 40px;background-position:-516px 0 } /* ÆÈ²ŞÄ¡*/
-
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel1{top:218px;left:499px;width: 90px;height: 40px;background-position:0 0 } /* ì–¼êµ´*/
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel2{top:339px;left:583px;width: 70px;height: 40px;background-position:-90px 0 } /* ì†*/
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel3{top:281px;left:382px;width: 106px;height: 40px;background-position:-160px 0 } /* ëª¨ë“ ë¶€ìœ„*/
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel4{top:354px;left:303px;width: 90px;height: 40px;background-position:-266px 0 } /* ì†ë*/
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel5{top:453px;left:374px;width: 70px;height: 40px;background-position:-356px 0 } /* ë°œ*/
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel6{top:412px;left:516px;width: 90px;height: 40px;background-position:-426px 0 } /* ë¬´ë¦*/
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel7{top:285px;left:555px;width: 90px;height: 40px;background-position:-516px 0 } /* íŒ”ê¿ˆì¹˜*/
 		#p_sec3 .p_sec3_area .p_select_area li.btn_sel1 .p_over{background-position:0 -40px }
 		#p_sec3 .p_sec3_area .p_select_area li.btn_sel2 .p_over{background-position:-90px -40px }
 		#p_sec3 .p_sec3_area .p_select_area li.btn_sel3 .p_over{background-position:-160px -40px }
@@ -60,7 +53,6 @@
 		#p_sec3 .p_sec3_area .p_select_area li.btn_sel5 .p_over{background-position:-356px -40px }
 		#p_sec3 .p_sec3_area .p_select_area li.btn_sel6 .p_over{background-position:-426px -40px }
 		#p_sec3 .p_sec3_area .p_select_area li.btn_sel7 .p_over{background-position:-516px -40px }
-
 		#p_sec3 .p_sec3_area .p_select_item{height:160px;padding-left:3px;width: 940px;margin:0 auto;}
 		#p_sec3 .p_sec3_area .p_select_item li{position: relative;float:left;padding-right:3px;}
 		#p_sec3 .p_sec3_area .p_select_item li .p_over{position: absolute;top:0;left:0;display: none}
@@ -69,54 +61,47 @@
 		#p_sec4 ul{position: relative;margin:-20px 0 0 -27px;overflow: hidden}
 		#p_sec4 ul li{float:left;margin:20px 0 0 27px;}
 		#p_sec4 ul li:first-child{margin-top:0;}
-
 		#p_bottom_bn{padding-bottom:50px;}
-
 	</style>
 	<script>
 	 	
-	 	var areaGoodsNum = [];
-		areaGoodsNum[0] = [0];//¾ó±¼
-		areaGoodsNum[1] = [0,1,2];//¼Õ
-		areaGoodsNum[2] = [0,1];//¸ğµçºÎÀ§
-		areaGoodsNum[3] = [2];//¼Õ³¡
-		areaGoodsNum[4] = [4,5,6];//¹ß
-		areaGoodsNum[5] = [3];//¹«¸­
-		areaGoodsNum[6] = [3];//ÆÈ²ŞÄ¡	 	
+	 	var areaGoodsNum = [  ];
+		areaGoodsNum[0] = [0];//ì–¼êµ´
+		areaGoodsNum[1] = [0,1,2];//ì†
+		areaGoodsNum[2] = [0,1];//ëª¨ë“ ë¶€ìœ„
+		areaGoodsNum[3] = [2];//ì†ë
+		areaGoodsNum[4] = [4,5,6];//ë°œ
+		areaGoodsNum[5] = [3];//ë¬´ë¦
+		 areaGoodsNum[6] = [3];//íŒ”ê¿ˆì¹˜	 	
+
 		
 
 		$(document).ready(function(){
-
 			$(".p_select_area").find("li").each(function(e){
+				// class  p_select_area ì°¾ì•„ì„œ  ê°ê°ì˜ li ë¥¼ ì˜ì—­ì§€ì •
+
 				$(this).click(function(){
+					//ê°ê°ì˜ li ë¥¼  í´ë¦­í–ˆì„ë•Œ
+					//alert("click")
 					$(this).find(".p_over").stop().fadeIn(200);
 					$(".p_select_area li").not(":eq("+e+")").find(".p_over").stop().fadeOut(100);	
 					
 					showGoodsUp(areaGoodsNum[e]);
-
 				});				
 			});
-
 		});
-
 		function showGoodsUp(arr){
-
 			$(".p_select_item li").find(".p_over").fadeOut(100);
 			$(".p_select_item li").stop(true,false).animate({"margin-top":0},100);	
-
 			for ( var i = 0  ; i < arr.length ; i++ ){
 				$(".p_select_item li").eq(arr[i]).find(".p_over").fadeIn(300);
 				$(".p_select_item li").eq(arr[i]).stop(true,false).delay(100*i).animate({"margin-top":"-20px"},200);
 			}	
-
 		}
-
 		var mvSta = false;
 		$(window).scroll(function(){
 			
-
 			if ( $(window).scrollTop() > $("#p_header").offset().top && $(window).scrollTop() < $("#p_movie").offset().top ){
-
 				if ( !mvSta ){
 					mvSta = true;
 					$("#p_story .mm").eq(0).fadeOut(2500);
@@ -124,28 +109,20 @@
 					$("#p_story .mm").eq(2).delay(3500*2).fadeOut(2500);	
 					setTimeout(function(){mvSta = false},9500);
 				}
-
 			}else{
-
 				mvSta = false;
 				$("#p_story .mm").eq(0).stop().fadeIn(100);
 				$("#p_story .mm").eq(1).stop().fadeIn(100);
 				$("#p_story .mm").eq(2).stop().fadeIn(100);
-
 			}
-
 		});
-
 		function slidePop(con){
-
 			if ( $(con).css("display") == "none" ){
-
 				$(con).parent().find("dt img").attr("src", $(con).parent().find("dt img").attr("src").replace("_off","_on") );
 				$(con).slideDown(200);
 			}else{
 				$(con).parent().find("dt img").attr("src", $(con).parent().find("dt img").attr("src").replace("_on","_off") );
 				$(con).slideUp(200);
-
 			}
 			
 		}
@@ -156,13 +133,13 @@
 
 	<div id="p_wrapper">
 		<div id="p_first_auction">
-			<p><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_top.gif" alt="¸Å¿ù1ÀÏ, ¿Á¼Ç¿¡¼­ ÃÖ°íÀÇ ÇıÅÃ°ú ºê·£µå¸¦ ¸¸³ª¼¼¿ä 1ÀÏÀº ¿Á¼Ç" /></p>
+			<p><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_top.gif" alt="ë§¤ì›”1ì¼, ì˜¥ì…˜ì—ì„œ ìµœê³ ì˜ í˜œíƒê³¼ ë¸Œëœë“œë¥¼ ë§Œë‚˜ì„¸ìš” 1ì¼ì€ ì˜¥ì…˜" /></p>
 			<div id="p_navi">
 				<div id="p_navi_cnt">
 					<ul>
-						<li><a href="http://promotion.auction.co.kr/promotion/MD/eventview.aspx?txtMD=08D0B01023"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_nav1_on.gif" alt="ÀÌ´ŞÀÇ ºê·£µå" /></a></li>
-						<li><a href="http://promotion.auction.co.kr/promotion/MD/eventview.aspx?txtMD=08D1F7626D"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_nav2_off.gif" alt="ÀÌ´ŞÀÇ ÇÏÀÌ¶óÀÌÆ®" /></a></li>
-						<li><a href="http://promotion.auction.co.kr/promotion/MD/eventview.aspx?txtMD=08D1FDFCAB"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_nav3_off.gif" alt="ÀÌ´ŞÀÇ ÇıÅÃ" /></a></li>
+						<li><a href="http://promotion.auction.co.kr/promotion/MD/eventview.aspx?txtMD=08D0B01023"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_nav1_on.gif" alt="ì´ë‹¬ì˜ ë¸Œëœë“œ" /></a></li>
+						<li><a href="http://promotion.auction.co.kr/promotion/MD/eventview.aspx?txtMD=08D1F7626D"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_nav2_off.gif" alt="ì´ë‹¬ì˜ í•˜ì´ë¼ì´íŠ¸" /></a></li>
+						<li><a href="http://promotion.auction.co.kr/promotion/MD/eventview.aspx?txtMD=08D1FDFCAB"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_nav3_off.gif" alt="ì´ë‹¬ì˜ í˜œíƒ" /></a></li>
 					</ul>
 				</div>
 			</div>
@@ -171,7 +148,7 @@
 		<div id="p_header">
 			<img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_top_visual.jpg" alt="" usemap="#map_top">
             <map name="map_top">
-            <area shape="rect" coords="495,305,724,349" href="http://stores.auction.co.kr/ckj3094" target="_blank" alt="¹êµå¿¡ÀÌµå °ø½Ä½ºÅä¾î">
+            <area shape="rect" coords="495,305,724,349" href="http://stores.auction.co.kr/ckj3094" target="_blank" alt="ë°´ë“œì—ì´ë“œ ê³µì‹ìŠ¤í† ì–´">
             </map>
 			<div id="p_share">
 				<iframe src="http://eventv2.auction.co.kr/Event3/2016/08/40/edra664_BandAid/Ifrm01Sns.aspx" width="56" height="350" id="shareFrame" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
@@ -224,13 +201,13 @@
 			<div class="p_sec3_area">
 				<img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_area.gif" alt="">
 				<ul class="p_select_area">
-					<li class="btn_sel1" style="display:none"><p class="p_over"><span class="blind">¾ó±¼</span></p></li>
-					<li class="btn_sel2"><p class="p_over"><span class="blind">¼Õ</span></p></li>
-					<li class="btn_sel3"><p class="p_over"><span class="blind">¸ğµçºÎÀ§</span></p></li>
-					<li class="btn_sel4"><p class="p_over"><span class="blind">¼Õ³¡</span></p></li>
-					<li class="btn_sel5"><p class="p_over"><span class="blind">¹ß</span></p></li>
-					<li class="btn_sel6"><p class="p_over"><span class="blind">¹«¸­</span></p></li>
-					<li class="btn_sel7"><p class="p_over"><span class="blind">ÆÈ²ŞÄ¡</span></p></li>
+					<li class="btn_sel1" style="display:none"><p class="p_over"><span class="blind">ì–¼êµ´</span></p></li>
+					<li class="btn_sel2"><p class="p_over"><span class="blind">ì†</span></p></li>
+					<li class="btn_sel3"><p class="p_over"><span class="blind">ëª¨ë“ ë¶€ìœ„</span></p></li>
+					<li class="btn_sel4"><p class="p_over"><span class="blind">ì†ë</span></p></li>
+					<li class="btn_sel5"><p class="p_over"><span class="blind">ë°œ</span></p></li>
+					<li class="btn_sel6"><p class="p_over"><span class="blind">ë¬´ë¦</span></p></li>
+					<li class="btn_sel7"><p class="p_over"><span class="blind">íŒ”ê¿ˆì¹˜</span></p></li>
 				</ul>
 				<ul class="p_select_item">
 					<li><p class="p_over"><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345393137" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods1_on.jpg" alt=""></a></p><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods1_off.jpg" alt=""></li>
@@ -248,13 +225,13 @@
 			<h3><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_tit.gif" alt=""></h3>
 			<div class="inner">
 				<ul class="goods_list">
-					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345393137" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods1.jpg" alt="[¹êµå¿¡ÀÌµå]¾îµå¹ê½ºµåÈú¸µ-ÀÏ¹İÇü 10ÀÔ"></a></li>
-					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345393617" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods2.jpg" alt="[¹êµå¿¡ÀÌµå]¾îµå¹ê½ºµåÈú¸µ-´ëÇü 6ÀÔ"></a></li>
-					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345395190" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods3.jpg" alt="[¹êµå¿¡ÀÌµå]¾îµå¹ê½ºµåÈú¸µ-¼Õ°¡¶ô ³¡ 10ÀÔ"></a></li>
-					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345396254" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods4.jpg" alt="[¹êµå¿¡ÀÌµå]¾îµå¹ê½ºµåÈú¸µ-¹«¸­, ÆÈ²ŞÄ¡ 3ÀÔ"></a></li>
-					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345397203" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods5.jpg" alt="[¹êµå¿¡ÀÌµå]Ç²ÄÉ¾î-¹ßµÚ²ŞÄ¡ ½ò¸²¹æÁö 4ÀÔ"></a></li>
-					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345397491" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods6.jpg" alt="[¹êµå¿¡ÀÌµå]Ç²ÄÉ¾î-¹ß°¡¶ô ¹°Áı¹æÁö 5ÀÔ"></a></li>
-					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345397861" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods7.jpg" alt="[¹êµå¿¡ÀÌµå]Ç²ÄÉ¾î-¹ß¹Ù´Ú ½ò¸²¹æÁö 4ÀÔ"></a></li>
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345393137" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods1.jpg" alt="[ë°´ë“œì—ì´ë“œ]ì–´ë“œë°´ìŠ¤ë“œíë§-ì¼ë°˜í˜• 10ì…"></a></li>
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345393617" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods2.jpg" alt="[ë°´ë“œì—ì´ë“œ]ì–´ë“œë°´ìŠ¤ë“œíë§-ëŒ€í˜• 6ì…"></a></li>
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345395190" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods3.jpg" alt="[ë°´ë“œì—ì´ë“œ]ì–´ë“œë°´ìŠ¤ë“œíë§-ì†ê°€ë½ ë 10ì…"></a></li>
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345396254" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods4.jpg" alt="[ë°´ë“œì—ì´ë“œ]ì–´ë“œë°´ìŠ¤ë“œíë§-ë¬´ë¦, íŒ”ê¿ˆì¹˜ 3ì…"></a></li>
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345397203" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods5.jpg" alt="[ë°´ë“œì—ì´ë“œ]í’‹ì¼€ì–´-ë°œë’¤ê¿ˆì¹˜ ì ë¦¼ë°©ì§€ 4ì…"></a></li>
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345397491" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods6.jpg" alt="[ë°´ë“œì—ì´ë“œ]í’‹ì¼€ì–´-ë°œê°€ë½ ë¬¼ì§‘ë°©ì§€ 5ì…"></a></li>
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345397861" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods7.jpg" alt="[ë°´ë“œì—ì´ë“œ]í’‹ì¼€ì–´-ë°œë°”ë‹¥ ì ë¦¼ë°©ì§€ 4ì…"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -266,5 +243,3 @@
 	</div>
 </body>
 </html>
-
-

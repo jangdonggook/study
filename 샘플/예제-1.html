@@ -7,32 +7,80 @@
 <script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>
 
 
-<title>¿Á¼Ç</title>
+<title>ì˜¥ì…˜</title>
 <style>
-	
+	.cla{border: 1px solid blue;}
 </style>
 <script>
-	//º¯¼ö
-	//¿¬»êÀÚ
-	//¹è¿­
+	//ë³€ìˆ˜
+	//ì—°ì‚°ì
+	//ë°°ì—´
 	// ====================== 
-	//ÇÔ¼ö
+	//í•¨ìˆ˜
 	//jquery ( http://api.jquery.com/ )
-	 // ¼¿·ºÅÍ ( id , class ) , ¸¶¿ì½º ÀÌº¥Æ®
+	 // ì…€ë ‰í„° ( id , class ) , ë§ˆìš°ìŠ¤ ì´ë²¤íŠ¸
+	// $( window ).resize(function() {
+	//   $( "#log" ).append( "<div>Handler for .resize() called.</div>" );
+	// });
 
-	
+
+	//$('#log')
+
+
+	.eq()
+	ì…€ë ‰í„°
+	.each()
+	http://api.jquery.com/category/attributes/
+
+	$(document).ready(function(){
+		//$(".cla").eq(1).css("border" , "1px solid red")  *
+
+		//alert($(".cla").length)
+
+
+		// $(".menu").find("li").each(function(e){
+		// 		// class  p_select_area ì°¾ì•„ì„œ  ê°ê°ì˜ li ë¥¼ ì˜ì—­ì§€ì •
+
+		// 		$(this).click(function(){
+		// 			//ê°ê°ì˜ li ë¥¼  í´ë¦­í–ˆì„ë•Œ
+		// 			//alert("click")
+		// 			$(this).find(".p_over").stop().fadeIn(200);
+		// 			$(".p_select_area li").not(":eq("+e+")").find(".p_over").stop().fadeOut(100);	
+					
+		// 			showGoodsUp(areaGoodsNum[e]);
+		// 		});				
+		// 	});
+	})
+
 </script>
 </head>
 
 <body>
 	<div id="p_wrapper">
-		<div id="p_header">
+
+		<ul class="menu">
+			<li><a href="#none">btn1</a> </li>
+			<li><a href="#none">btn2</a> </li>
+			<li><a href="#none">btn3</a> </li>
+			<li><a href="#none">btn4</a> </li>
+			<li><a href="#none">btn5</a> </li>
+		</ul>
+		<div id="log">
 			
 		</div>
-		<div id="p_contents">
+		<div id="p_contents" class="cla" style="height:200px; width:200px;">
 			
 		</div>
-		<div id="p_footer">
+		<div id="p_footer" class="cla" style="height:200px; width:200px;">
+			
+		</div>
+		<div id="p_footer" class="cla" style="height:200px; width:200px;">
+			
+		</div>
+		<div id="p_footer" class="cla" style="height:200px; width:200px;">
+			
+		</div>
+		<div id="p_footer" class="cla" style="height:200px; width:200px;">
 			
 		</div>
 	</div>
