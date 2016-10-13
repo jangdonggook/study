@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>옥션 - 모바일 쇼핑은 옥션</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/086A428A1C/jquery-1.11.3.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="http://eventimg.auction.co.kr/md/auction/0756F9B458/init.css" />				 -->
+
+	<style type="text/css">
+		*{margin:0;padding:0; border:0;}
+		li{list-style:none;}
+		img{border:0;}
+
+		#p_wrapper{width:100%;text-align:center;}
+		#p_wrapper img{vertical-align: top;}
+		#p_header{position: relative;background: url(http://eventimg.auction.co.kr/md/auction/08D0B01023/w_bg_top.jpg) no-repeat 50% 0 #eee5dc;height:400px;}
+		#p_header #p_share{position:absolute;top:20px;right:50%;margin-right:-470px;width:56px;}
+		#p_wrapper .blind{display: none}
+
+		#p_navi{width:100%;height:68px;position:relative;z-index:300;}
+		#p_navi_cnt{height:68px;z-index:10;}
+		#p_navi_cnt ul{width:644px;padding:0 168px;/*background:#000000*/;background-color:#c20012;margin:0 auto;overflow:hidden;}
+		#p_navi_cnt ul li{float:left;text-align:center;}
+
+		#p_story{background: #26a2b1;padding-top:60px;}
+		#p_story .visual{width: 560px;height: 357px;position: relative;margin:0 auto;background:#6b6b6b}		
+
+		#p_movie{background: #f5f5f5;padding-bottom:60px;}
+		#p_movie .mv{width: 560px;height: 357px;margin:0 auto;background: #252525}
+		
+		.mm{position: absolute;top:0;left:0;}
+		.mm1{z-index: 105}
+		.mm2{z-index: 104}
+		.mm3{z-index: 103}
+		.mm4{z-index: 102}
+
+		.p_section h3{background:#c20012}
+		.p_section .inner{padding:40px 0;}
+		#p_sec2 {padding-bottom:40px;}
+		#p_sec2 .info dd{display: none}
+
+		#p_sec3{background:#ffca2d;padding-bottom:60px;}
+		#p_sec3 .p_sec3_area{width: 980px;margin:0 auto;position: relative;}
+		#p_sec3 .p_sec3_area .p_select_area{position: absolute;top:0;left:0;width: 100%;height: 100%;}
+		#p_sec3 .p_sec3_area .p_select_area li{position: absolute;overflow: hidden;background-image: url(http://eventimg.auction.co.kr/md/auction/08D0B01023/w_area_name.png);background-repeat: no-repeat;cursor: pointer;}
+		#p_sec3 .p_sec3_area .p_select_area li .p_over{position: absolute;top:0;left: 0;width: 100%;height: 100%;background-image: url(http://eventimg.auction.co.kr/md/auction/08D0B01023/w_area_name.png);background-repeat: no-repeat;display:none}
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel1{top:218px;left:499px;width: 90px;height: 40px;background-position:0 0 } /* 얼굴*/
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel2{top:339px;left:583px;width: 70px;height: 40px;background-position:-90px 0 } /* 손*/
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel3{top:281px;left:382px;width: 106px;height: 40px;background-position:-160px 0 } /* 모든부위*/
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel4{top:354px;left:303px;width: 90px;height: 40px;background-position:-266px 0 } /* 손끝*/
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel5{top:453px;left:374px;width: 70px;height: 40px;background-position:-356px 0 } /* 발*/
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel6{top:412px;left:516px;width: 90px;height: 40px;background-position:-426px 0 } /* 무릎*/
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel7{top:285px;left:555px;width: 90px;height: 40px;background-position:-516px 0 } /* 팔꿈치*/
+
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel1 .p_over{background-position:0 -40px }
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel2 .p_over{background-position:-90px -40px }
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel3 .p_over{background-position:-160px -40px }
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel4 .p_over{background-position:-266px -40px }
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel5 .p_over{background-position:-356px -40px }
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel6 .p_over{background-position:-426px -40px }
+		#p_sec3 .p_sec3_area .p_select_area li.btn_sel7 .p_over{background-position:-516px -40px }
+
+		#p_sec3 .p_sec3_area .p_select_item{height:160px;padding-left:3px;width: 940px;margin:0 auto;}
+		#p_sec3 .p_sec3_area .p_select_item li{position: relative;float:left;padding-right:3px;}
+		#p_sec3 .p_sec3_area .p_select_item li .p_over{position: absolute;top:0;left:0;display: none}
+		
+		#p_sec4 .inner{width: 980px;margin:0 auto;position: relative;}
+		#p_sec4 ul{position: relative;margin:-20px 0 0 -27px;overflow: hidden}
+		#p_sec4 ul li{float:left;margin:20px 0 0 27px;}
+		#p_sec4 ul li:first-child{margin-top:0;}
+
+		#p_bottom_bn{padding-bottom:50px;}
+
+	</style>
+	<script>
+	 	
+	 	var areaGoodsNum = [];
+		areaGoodsNum[0] = [0];//얼굴
+		areaGoodsNum[1] = [0,1,2];//손
+		areaGoodsNum[2] = [0,1];//모든부위
+		areaGoodsNum[3] = [2];//손끝
+		areaGoodsNum[4] = [4,5,6];//발
+		areaGoodsNum[5] = [3];//무릎
+		areaGoodsNum[6] = [3];//팔꿈치	 	
+		
+
+		$(document).ready(function(){
+
+			$(".p_select_area").find("li").each(function(e){
+				$(this).click(function(){
+					$(this).find(".p_over").stop().fadeIn(200);
+					$(".p_select_area li").not(":eq("+e+")").find(".p_over").stop().fadeOut(100);	
+					
+					showGoodsUp(areaGoodsNum[e]);
+
+				});				
+			});
+
+		});
+
+		function showGoodsUp(arr){
+
+			$(".p_select_item li").find(".p_over").fadeOut(100);
+			$(".p_select_item li").stop(true,false).animate({"margin-top":0},100);	
+
+			for ( var i = 0  ; i < arr.length ; i++ ){
+				$(".p_select_item li").eq(arr[i]).find(".p_over").fadeIn(300);
+				$(".p_select_item li").eq(arr[i]).stop(true,false).delay(100*i).animate({"margin-top":"-20px"},200);
+			}	
+
+		}
+
+		var mvSta = false;
+		$(window).scroll(function(){
+			
+
+			if ( $(window).scrollTop() > $("#p_header").offset().top && $(window).scrollTop() < $("#p_movie").offset().top ){
+
+				if ( !mvSta ){
+					mvSta = true;
+					$("#p_story .mm").eq(0).fadeOut(2500);
+					$("#p_story .mm").eq(1).delay(3500).fadeOut(2500);
+					$("#p_story .mm").eq(2).delay(3500*2).fadeOut(2500);	
+					setTimeout(function(){mvSta = false},9500);
+				}
+
+			}else{
+
+				mvSta = false;
+				$("#p_story .mm").eq(0).stop().fadeIn(100);
+				$("#p_story .mm").eq(1).stop().fadeIn(100);
+				$("#p_story .mm").eq(2).stop().fadeIn(100);
+
+			}
+
+		});
+
+		function slidePop(con){
+
+			if ( $(con).css("display") == "none" ){
+
+				$(con).parent().find("dt img").attr("src", $(con).parent().find("dt img").attr("src").replace("_off","_on") );
+				$(con).slideDown(200);
+			}else{
+				$(con).parent().find("dt img").attr("src", $(con).parent().find("dt img").attr("src").replace("_on","_off") );
+				$(con).slideUp(200);
+
+			}
+			
+		}
+		
+	</script>
+</head>
+<body>
+
+	<div id="p_wrapper">
+		<div id="p_first_auction">
+			<p><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_top.gif" alt="매월1일, 옥션에서 최고의 혜택과 브랜드를 만나세요 1일은 옥션" /></p>
+			<div id="p_navi">
+				<div id="p_navi_cnt">
+					<ul>
+						<li><a href="http://promotion.auction.co.kr/promotion/MD/eventview.aspx?txtMD=08D0B01023"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_nav1_on.gif" alt="이달의 브랜드" /></a></li>
+						<li><a href="http://promotion.auction.co.kr/promotion/MD/eventview.aspx?txtMD=08D1F7626D"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_nav2_off.gif" alt="이달의 하이라이트" /></a></li>
+						<li><a href="http://promotion.auction.co.kr/promotion/MD/eventview.aspx?txtMD=08D1FDFCAB"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_nav3_off.gif" alt="이달의 혜택" /></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="p_header">
+			<img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_top_visual.jpg" alt="" usemap="#map_top">
+            <map name="map_top">
+            <area shape="rect" coords="495,305,724,349" href="http://stores.auction.co.kr/ckj3094" target="_blank" alt="밴드에이드 공식스토어">
+            </map>
+			<div id="p_share">
+				<iframe src="http://eventv2.auction.co.kr/Event3/2016/08/40/edra664_BandAid/Ifrm01Sns.aspx" width="56" height="350" id="shareFrame" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			</div>
+		</div>
+
+		<div id="p_story">
+			<div class="visual">
+				<img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_roll_img1.png" alt="" class="mm mm1">
+				<img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_roll_img2.jpg" alt="" class="mm mm2">
+				<img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_roll_img3.jpg" alt="" class="mm mm3">
+				<img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_roll_img4.jpg" alt="" class="mm mm4">
+			</div>
+			<img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_story.jpg" alt="">
+		</div>
+
+		<div id="p_movie">
+			<h3><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_mv_tit.gif" alt=""></h3>
+			<div class="mv">
+				<iframe class="" src="http://www.youtube.com/embed/ydFSQw2sH38?wmode=opaque&rel=0" width="100%" height="100%" scrolling="no" frameborder="0" allowTransparency="true"></iframe>			
+			</div>
+		</div>
+
+		<div id="p_sec1" class="p_section">
+			<h3><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec1_tit.gif" alt=""></h3>
+			<div class="inner">
+				<iframe src="http://eventv2.auction.co.kr/Event3/2016/08/40/edra664_BandAid/Ifrm02Trial.aspx" width="980" height="460" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			</div>
+		</div>
+
+		<div id="p_sec2" class="p_section">
+			<h3><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec2_tit.gif" alt=""></h3>
+			<div class="inner">
+				<iframe src="http://eventv2.auction.co.kr/Event3/2016/08/40/edra664_BandAid/Ifrm03Special.aspx" width="980" height="1340" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			</div>
+			<div class="info">
+				<dl>
+					<dt><a href="javascript:slidePop('.slide_info1');"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_btn_info1_off.gif" alt=""></a></dt>
+					<dd class="slide_info1"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_info1_img.gif" alt=""></dd>
+				</dl>
+				<dl>
+					<dt><a href="javascript:slidePop('.slide_info2');"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_btn_info2_off.gif" alt=""></a></dt>
+					<dd class="slide_info2"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_info2_img.gif" alt=""></dd>
+				</dl>
+			</div>
+		</div>		
+
+		<div id="p_sec3" class="p_section">
+			<h3><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_tit.gif" alt=""></h3>
+			<div class="p_sec3_area">
+				<img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_area.gif" alt="">
+				<ul class="p_select_area">
+					<li class="btn_sel1" style="display:none"><p class="p_over"><span class="blind">얼굴</span></p></li>
+					<li class="btn_sel2"><p class="p_over"><span class="blind">손</span></p></li>
+					<li class="btn_sel3"><p class="p_over"><span class="blind">모든부위</span></p></li>
+					<li class="btn_sel4"><p class="p_over"><span class="blind">손끝</span></p></li>
+					<li class="btn_sel5"><p class="p_over"><span class="blind">발</span></p></li>
+					<li class="btn_sel6"><p class="p_over"><span class="blind">무릎</span></p></li>
+					<li class="btn_sel7"><p class="p_over"><span class="blind">팔꿈치</span></p></li>
+				</ul>
+				<ul class="p_select_item">
+					<li><p class="p_over"><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345393137" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods1_on.jpg" alt=""></a></p><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods1_off.jpg" alt=""></li>
+					<li><p class="p_over"><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345393617" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods2_on.jpg" alt=""></a></p><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods2_off.jpg" alt=""></li>
+					<li><p class="p_over"><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345395190" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods3_on.jpg" alt=""></a></p><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods3_off.jpg" alt=""></li>
+					<li><p class="p_over"><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345396254" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods4_on.jpg" alt=""></a></p><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods4_off.jpg" alt=""></li>
+					<li><p class="p_over"><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345397203" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods5_on.jpg" alt=""></a></p><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods5_off.jpg" alt=""></li>
+					<li><p class="p_over"><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345397491" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods6_on.jpg" alt=""></a></p><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods6_off.jpg" alt=""></li>
+					<li><p class="p_over"><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345397861" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods7_on.jpg" alt=""></a></p><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec3_goods7_off.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="p_sec4" class="p_section">
+			<h3><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_tit.gif" alt=""></h3>
+			<div class="inner">
+				<ul class="goods_list">
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345393137" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods1.jpg" alt="[밴드에이드]어드밴스드힐링-일반형 10입"></a></li>
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345393617" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods2.jpg" alt="[밴드에이드]어드밴스드힐링-대형 6입"></a></li>
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345395190" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods3.jpg" alt="[밴드에이드]어드밴스드힐링-손가락 끝 10입"></a></li>
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345396254" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods4.jpg" alt="[밴드에이드]어드밴스드힐링-무릎, 팔꿈치 3입"></a></li>
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345397203" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods5.jpg" alt="[밴드에이드]풋케어-발뒤꿈치 쏠림방지 4입"></a></li>
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345397491" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods6.jpg" alt="[밴드에이드]풋케어-발가락 물집방지 5입"></a></li>
+					<li><a href="http://itempage3.auction.co.kr/DetailView.aspx?itemno=B345397861" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_sec4_goods7.jpg" alt="[밴드에이드]풋케어-발바닥 쏠림방지 4입"></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="p_bottom_bn">
+			<a href="http://stores.auction.co.kr/ckj3094" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/08D0B01023/w_bottom_bn.gif" alt=""></a>
+		</div>
+
+	</div>
+</body>
+</html>
+
+
