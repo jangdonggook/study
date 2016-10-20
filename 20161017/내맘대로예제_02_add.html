@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>내맘대로</title>
+<style>
+	*{padding:0;margin:0;font-size:12px;line-height:18px;color:#000;}
+	ul {list-style: none;}
+	form {text-align: center; padding: 7px;width:600px;}
+	#display {width: 81%; height: 30px; text-align: right; font-size: 18px; margin-bottom: 5px; }
+	.digit, .operator {font-size:24px; height: 55px; width: 20%; border-radius: 5px; display: inline-block; padding: 5px; }
+</style>
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"> </script>
+<script type="text/javascript">
+
+function num1(){
+  document.case.display.value += "1";
+}
+function num2(){
+  document.case.display.value += "2";
+}
+function num3(){
+  document.case.display.value += "3";
+}
+function num4(){
+  document.case.display.value += "4";
+}
+function num5(){
+  document.case.display.value += "5";
+}
+function num6(){
+  document.case.display.value += "6";
+}
+function num7(){
+  document.case.display.value += "7";
+}
+function num8(){
+
+  document.case.display.value += "8";
+
+}
+function num9(){
+
+  document.case.display.value += "9";
+}
+function num0(){
+  document.case.display.value += "0";
+}
+
+// 연산자 입력
+function numPlus(){
+
+  document.case.display.value += "+";
+
+}
+function numMinus(){
+
+  document.case.display.value += "-";
+}
+function numDivide(){
+  document.case.display.value += "/";
+}
+function numMultiply(){
+  document.case.display.value += "*";
+}
+function numC(){
+	//alert(document.case.display.value)
+  document.case.display.value = "";
+}
+function numEquals() {
+  // eval() 함수는 수식형태로된 문자열을 실수로 바꾸어 반환해 주는 자바스크립트 내장함수
+  var equals = eval(document.case.display.value);
+  document.case.display.value = equals;
+}
+
+function num1(){
+  document.case.display.value += "1";
+}
+
+//연산자 중복 체크 
+//계산후 숫자 클릭시 바로 뒤에 붙는 현상
+// =  클릭하면 undefined 나오는 현상 
+//계산  히스토리 남기기 
+
+
+</script>
+</head>
+<body>
+	<form name="case">
+
+		<input name="display" id="display" value="">
+
+		<input type="button" class="digit" value="1" onclick="num1()">
+		<input type="button" class="digit" value="2" onclick="num2()">
+		<input type="button" class="digit" value="3" onclick="num3()">
+		<input type="button" id="plus" class="operator" value="+" onclick="numPlus()">
+
+		<input type="button" class="digit" value="4" onclick="num4()">
+		<input type="button" class="digit" value="5" onclick="num5()">
+		<input type="button" class="digit" value="6" onclick="num6()">
+		<input type="button" id="minus" class="operator" value="-" onclick="numMinus()">
+
+		<input type="button" class="digit" value="7" onclick="num7()">
+		<input type="button" class="digit" value="8" onclick="num8()">
+		<input type="button" class="digit" value="9" onclick="num9()">
+		<input type="button" id="divide" class="operator" value="/" onclick="numDivide()">
+
+		<input type="button" class="digit" value="0" onclick="num0()">
+		<input type="button" id="clearMem" class="operator" value="C" onclick="numC()">
+
+		<input type="button" id="equal" class="operator" value="=" onclick="numEquals()">
+		<input type="button" id="multiply" class="operator" value="*" onclick="numMultiply()">
+	 
+	</form>
+</body>
+</html>

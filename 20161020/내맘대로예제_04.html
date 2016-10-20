@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>애니</title>
+<style type="text/css">
+
+	.wrap {border:3px solid silver; overflow:hidden; padding:5px; width:500px; margin:0 auto; }
+	.wrap img { position:relative; left:-120px; }
+	.wrap p { position:relative; left:-120px; }
+	.wrap_btn { text-align:center; margin-top:10px; }
+
+</style>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+
+	function gogogo(){
+		$('.wrap img').stop().css({ left:'-120px' }).animate({ left:'+=700' }, 2000);
+		$('.wrap p').stop().css({ left:'-120px' }).animate({ left:'+=700' }, 2000);
+	}
+
+</script>
+</head>
+<body>
+
+
+
+<div class="wrap">
+	<img src="http://ktsmemo.cafe24.com/img/man.gif">
+	<p>ㅋㅋㅋㅋㅋㅋㅋ</p>
+</div>
+<div class="wrap_btn">
+	<button type="button" onclick="gogogo()">클릭클릭클릭클릭클릭</button>
+</div>
+
+<!-- 예제 종료 -->
+
+
+</body>
+</html>

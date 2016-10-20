@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>내맘대로</title>
+<style>
+	table tr td{padding:5px;}
+</style>
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"> </script>
+<script type="text/javascript">
+
+
+	var color = ['00', '20', '40', '60', '80', 'a0', 'c0', 'ff']
+
+	for (i = 0; i < 8; i++) { 
+		document.write("<table cellpadding=8>");
+		for (h = 0; h < 8; h++) {
+			document.write("<tr>");
+			for (k = 0; k < 8; k++) {
+
+				document.write('<td bgcolor="#' + color[i] + color[h] + color[k] + '">');
+				document.write('<tt><font color="#' + color[7 - i] + color[7 - h] + color[7 - k] + '"> ');
+				document.write(color[i] + color[h] + color[k] + ' </font></tt></td>');
+			}
+			document.write("</tr>");
+		}
+		document.write("</table><br>");
+	}
+
+
+</script>
+</head>
+<body>
+
+</html>
